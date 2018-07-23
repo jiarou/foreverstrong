@@ -46,7 +46,7 @@ nav div{
    justify-content: center;
    margin-top: 15px;
 }
-#Bottom a{
+.headerIcon a{
     text-decoration: none;
     color: black;
 }
