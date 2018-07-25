@@ -1,7 +1,4 @@
-body{
 
-
-}
 .Container{
     width: 85vmax; 
     margin: 0 auto;
@@ -66,3 +63,10 @@ nav div{
 
 }
 
+@media only screen and (max-width: 600px) {
+    .Container{
+        width: 50vmax; 
+        margin: 0 auto;
+    }
+
+}
