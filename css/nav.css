@@ -68,6 +68,11 @@ nav div a {
     transition: all 0.5s;
 }
 
+.conter_product{
+    margin: 0 10px;
+    margin-top: 14vw;
+    
+}
 @media only screen and (max-width: 600px) {
 
 
@@ -75,10 +80,15 @@ nav div a {
    
        font-size: 2vmax;
     }
-    
+    #infoTitle{
+        font-size: 2vmax;
+    }
     .container{
         width: 100%;
         margin: 0 auto;
+    }
+    .conter_product{
+        margin-top: 22vw;
     }
     
 
