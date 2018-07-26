@@ -34,6 +34,7 @@ nav div{
 
 #headerImg  img{
     width: 70%;
+    height: 30vmax;
     border-radius: 40px;
     display: block;
     margin: auto;
@@ -50,16 +51,20 @@ nav div{
 
 .headerIcon{
    width: 15%;
-   margin-left: 2vmax;
+   margin-left: 3vmax;
 
 }
 .headerIcon img{
+    width: 80%;
+}
+
+.headerIcon img:hover{
     width: 90%;
 }
 .headerIcon div{
     text-align: center;
     width: 90%;
-    font-size: 1.5vmax;
+    font-size: 2vmax;
 
 }
 
