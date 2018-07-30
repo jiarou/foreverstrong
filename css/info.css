@@ -4,6 +4,14 @@
     margin-top: 4vmax;
     padding-left: 27px;
 }
+#infoTitle:hover{
+    transform: scale(1.2);
+}
+
+#info-img  div img:hover,#logo:hover{
+    transform: scale(1.2);
+
+}
 
 #infoTitle{
     border-bottom: 4px double;
@@ -43,6 +51,16 @@
     margin-top: 5px;
     background-color: #7cd7ff;
 }
+
+#product .p1 img:hover, .p2 img:hover,{
+    transform: scale(1.2);
+}
+
+.Zoomout:hover{
+   font-size: 2vmax;
+}
+
+
 .p2{
 
     margin-top: 30px;
@@ -92,10 +110,6 @@ iframe {
 #info{
     margin-top: 4vmax;
     padding-left: 0px;
-}
-
-#google{
-    
 }
 
 }

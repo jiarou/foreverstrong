@@ -3,6 +3,7 @@
 <head>
     <link href="./css/info.css" rel="stylesheet" type="text/css">
     <link href="./css/nav.css" rel="stylesheet" type="text/css">
+    <link href="./css/lightbox.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>雋碩實業有限公司-品質控管</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -57,37 +58,37 @@
         <div id="product">
             <div class="pList">
                <div class="p1">
-                <img src="./images/qa_2.png" alt="">
+                <img src="./images/qa_2.png" onclick="openModal();currentSlide(1)" alt="">
                 <div>色差機</div>
                </div>
                <div class="p1" style="margin: 0 10px;">  
-                    <img src="./images/qa_6.png" alt="">
+                    <img src="./images/qa_6.png" onclick="openModal();currentSlide(2)" alt="">
                     <div>硬度測試</div>
                </div>
                <div class="p1">
-                    <img src="./images/qa_5.png" alt="">
+                    <img src="./images/qa_5.png" onclick="openModal();currentSlide(3)" alt="">
                     <div>PANTONE 色卡</div>
                </div>
 
             </div>
             <div class="p2">
-                <img src="./images/qa_4.png" alt="">
+                <img src="./images/qa_4.png" onclick="openModal();currentSlide(4)" alt="">
                 <div>色差機原理</div>
             </div>
 
             <div class="pList" style="margin-top: 30px">
                     <div class="p1">
-                     <img src="./images/qa_3.png" alt="">
+                     <img src="./images/qa_3.png" onclick="openModal();currentSlide(5)" alt="">
                      <div>膜厚機</div>
                     </div>
                     <div class="p1 conter_product" > 
                        
-                         <img src="./images/qa_1.jpg" alt="">
+                         <img src="./images/qa_1.jpg" onclick="openModal();currentSlide(6)" alt="">
                          <div>百格測試</div>
                        
                     </div>
                     <div class="p1">
-                         <img src="./images/qa_7.png" alt="">
+                         <img src="./images/qa_7.png" onclick="openModal();currentSlide(7)" alt="">
                          <div>酒精測試</div>
                     </div>
      
@@ -96,12 +97,86 @@
 
         </div>   
 
+
+
+
+
+        <div id="myModal" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                   <div class="mySlides">
+                    <img src="./images/qa_2.png"  alt="">
+                   </div>
+
+
+                   <div class="mySlides">  
+                        <img src="./images/qa_6.png"  alt="">
+                   </div>
+                   <div class="mySlides">
+                        <img src="./images/qa_5.png"  alt="">
+                        
+                   </div>
+    
+             
+                <div class="mySlides">
+                    <img src="./images/qa_4.png" alt="">            
+                </div>
+    
+                        <div class="mySlides">
+                         <img src="./images/qa_3.png"  alt="">
+                        
+                        </div>
+                        <div class="mySlides" > 
+                           
+                             <img src="./images/qa_1.jpg"  alt="">
+                        </div>
+                        <div class="mySlides">
+                             <img src="./images/qa_7.png"  alt="">
+
+                        </div>
+         
+         </div>
+    
+    
+            </div>   
       
 
-    </div>
+
 
 
 
 </body>
+
+<script>
+
+        function openModal() {
+            document.getElementById('myModal').style.display = "block";
+        }
+    
+        function closeModal() {
+            document.getElementById('myModal').style.display = "none";
+        }
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+    
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+    
+            slides[slideIndex - 1].style.display = "block";
+        }
+    
+    
+    
+    
+    
+    </script>
+
+
 
 </html>

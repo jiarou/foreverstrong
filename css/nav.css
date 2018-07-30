@@ -9,6 +9,7 @@ body{
   
   
 
+
 #logo img{
     width: 15vmax;
 }
@@ -29,7 +30,7 @@ nav{
     margin-bottom: 3vmax;
 }
 nav div:hover{
-    font-size: 2vmax;
+    transform: scale(1.2);
 }
 
 nav div{

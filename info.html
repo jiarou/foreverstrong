@@ -1,7 +1,9 @@
 <!DOCTYPE html>
+
 <head>
     <link href="./css/info.css" rel="stylesheet" type="text/css">
     <link href="./css/nav.css" rel="stylesheet" type="text/css">
+    <link href="./css/lightbox.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>雋碩實業有限公司-雋碩簡介</title>
@@ -13,21 +15,31 @@
 
 <body>
     <div class="container">
-      <div>
-        <div id="logo">
-            <img src="./images/title.GIF" />
-            <h1>雋碩實業有限公司</h1>
+        <div>
+            <div id="logo">
+                <img src="./images/title.GIF" />
+                <h1>雋碩實業有限公司</h1>
 
+            </div>
+            <nav>
+                <div>
+                    <a href="./index.html">首頁</a>
+                </div>
+                <div>
+                    <a href="./info.html">雋碩簡介</a>
+                </div>
+                <div>
+                    <a href="./service.html">服務項目</a>
+                </div>
+                <div>
+                    <a href="./productcontrol.html">品質控管</a>
+                </div>
+                <div>
+                    <a href="./contactus.html">聯絡我們</a>
+                </div>
+
+            </nav>
         </div>
-        <nav>
-            <div><a href="./index.html">首頁</a></div>
-            <div><a href="./info.html">雋碩簡介</a></div>
-            <div><a href="./service.html">服務項目</a></div>
-            <div><a href="./productcontrol.html">品質控管</a></div>
-            <div><a href="./contactus.html">聯絡我們</a></div>
-
-        </nav>
-       </div>     
 
         <div id="headerImg">
             <div class="headerImgText" style="top: 1vw;font-size: 2vmax;">
@@ -42,44 +54,93 @@
 
 
         <div id="info">
-                <div id="infoTitle">雋碩實業有限公司-雋碩簡介</div>
-    
-                <ul id="content">
-                        <li>
-                          專業的粉體,液體烤漆廠
-                        </li>
-                        <li>成立時間:西元 1998 年</li>
-                        <li>廠房大小:200 坪</li>
-                        <li>員工人數:12 人</li>
-                        <li>資本額:新台幣 1000 萬元</li>
-                </ul>
+            <div id="infoTitle">雋碩實業有限公司-雋碩簡介</div>
+
+            <ul id="content">
+                <li>
+                    專業的粉體,液體烤漆廠
+                </li>
+                <li>成立時間:西元 1998 年</li>
+                <li>廠房大小:200 坪</li>
+                <li>員工人數:12 人</li>
+                <li>資本額:新台幣 1000 萬元</li>
+            </ul>
         </div>
 
         <div id="info-img">
-         <div>
-             <img src="./images/info_2.png" style="width: 96%" />
-             <div>廠房全景</div>
-         </div>
-         <div style="display: flex;width: 97%;"> 
-             <div>
-             <img src="./images/info_1.png" style="width: 95%;margin-right: 2%" />
-             <div>噴漆房</div>
+            <div>
+                <img src="./images/info_2.png" onclick="openModal();currentSlide(1)" style="width: 96%" />
+                <div>廠房全景</div>
             </div>
-             <div>
-             <img src="./images/info_3.png" style="width: 95%"/>
-             <div>生產線</div>
+            <div style="display: flex;width: 97%;">
+                <div>
+                    <img src="./images/info_1.png" onclick="openModal();currentSlide(2)" style="width: 95%;margin-right: 2%" />
+                    <div>噴漆房</div>
+                </div>
+                <div>
+                    <img src="./images/info_3.png" onclick="openModal();currentSlide(3)" style="width: 95%" />
+                    <div>生產線</div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- The Modal/Lightbox -->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+
+            <div class="mySlides">
+                <img src="./images/info_2.png"  />
 
             </div>
-         </div>
-        
-        
+
+            <div class="mySlides" >
+
+                <img src="./images/info_1.png"  />
+
+            </div>
+
+            <div class="mySlides">
+                <img src="./images/info_3.png"  />
+            </div>
+
         </div>
 
 
     </div>
-
-
-
 </body>
+
+<script>
+
+    function openModal() {
+        document.getElementById('myModal').style.display = "block";
+    }
+
+    function closeModal() {
+        document.getElementById('myModal').style.display = "none";
+    }
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+    }
+
+
+
+
+
+</script>
 
 </html>
