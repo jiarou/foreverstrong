@@ -52,7 +52,7 @@
     background-color: #7cd7ff;
 }
 
-#product .p1 img:hover, .p2 img:hover,{
+#product .p1 img:hover, .p2 img:hover{
     transform: scale(1.2);
 }
 
